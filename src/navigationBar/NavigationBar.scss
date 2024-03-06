@@ -1,0 +1,91 @@
+@import "../variables/variable.scss";
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navContainer-dark {
+    box-shadow: 5px 0px 5px 2px $Very-Dark-Blue-2;
+    background-color: $Dark-Blue;
+}
+
+.navContainer-light {
+    box-shadow: 5px 0px 5px 2px $Dark-Gray-Opacity;
+    background-color: $White;
+}
+
+.navContainer-dark a {
+    text-decoration: none;
+}
+
+.navContainer-light a {
+    text-decoration: none;
+}
+
+.navContainer-dark h1 {
+    font-weight: 800;
+    font-size: 18px;
+    color: $White;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.navContainer-light h1 {
+    font-weight: 800;
+    font-size: 19px;
+    color: $Very-Dark-Blue-2;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+@media screen and (min-width: 375px) {
+    .navContainer-dark h1 {
+        font-size: 20px;
+    }
+
+    .navContainer-light h1 {
+        font-size: 20px;
+    }
+}
+
+@media screen and (min-width: 500px) {
+    .navContainer-dark h1 {
+        font-size: 24px;
+    }
+
+    .navContainer-light h1 {
+        font-size: 24px;
+    }
+}
+
+@media screen and (min-width: 767px) {
+    .navContainer-dark h1 {
+        font-size: 26px;
+    }
+
+    .navContainer-light h1 {
+        font-size: 26px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .navContainer-dark h1 {
+        font-size: 28px;
+    }
+
+    .navContainer-light h1 {
+        font-size: 28px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .navContainer-dark h1 {
+        font-size: 30px;
+    }
+
+    .navContainer-light h1 {
+        font-size: 30px;
+    }
+}

@@ -1,0 +1,110 @@
+@import "../variables/variable.scss";
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.toggleButton-dark {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    color: $White;
+}
+
+.toggleButton-light {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    color: $Very-Dark-Blue-2;
+}
+
+.toggleButton-dark .moon, .toggleButton-dark .sun {
+    width: 23px;
+    height: 23px;
+}
+
+.toggleButton-light .moon, .toggleButton-light .sun {
+    width: 23px;
+    height: 23px;
+}
+
+.toggleButton-dark span {
+    display: none;
+    font-size: 18px;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.toggleButton-light span {
+    display: none;
+    font-size: 18px;
+    font-weight: "light";
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+@media screen and (min-width: 375px) {
+    .toggleButton-dark .moon, .toggleButton-dark .sun {
+        width: 23px;
+        height: 23px;
+    }
+
+    .toggleButton-light .moon, .toggleButton-light .sun {
+        width: 23px;
+        height: 23px;
+    }
+    
+    .toggleButton-dark span {
+        display: inline;
+    }
+
+    .toggleButton-light span {
+        display: inline;
+    }
+}
+
+@media screen and (min-width: 500px) {
+    .toggleButton-dark .moon, .toggleButton-dark .sun {
+        width: 25px;
+        height: 25px;
+    }
+
+    .toggleButton-light .moon, .toggleButton-light .sun {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .toggleButton-dark span {
+        font-size: 20px;
+    }
+
+    .toggleButton-light span {
+        font-size: 20px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .toggleButton-dark .moon, .toggleButton-dark .sun {
+        width: 27px;
+        height: 27px;
+    }
+
+    .toggleButton-light .moon, .toggleButton-light .sun {
+        width: 27px;
+        height: 27px;
+    }
+
+    .toggleButton-dark span {
+        font-size: 22px;
+    }
+
+    .toggleButton-light span {
+        font-size: 22px;
+    }
+}

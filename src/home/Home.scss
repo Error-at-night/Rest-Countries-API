@@ -1,0 +1,215 @@
+@import "../variables/variable.scss";
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,500&display=swap');
+
+.homeContainer-dark input {
+    padding: 13px 20px;
+    font-family: 'Nunito Sans', sans-serif;
+    width: 500px;
+    max-width: 100%;
+    background-color: $Dark-Blue;
+    box-shadow: 2px 2px 1px $Very-Dark-Blue-Opacity;
+    color: $White;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    &::placeholder {
+        color: $White;
+        font-family: 'Nunito Sans', sans-serif;
+    }
+}
+
+.homeContainer-light input {
+    padding: 13px 20px;
+    font-family: 'Nunito Sans', sans-serif;
+    width: 500px;
+    max-width: 100%;
+    background-color: $White;
+    box-shadow: 2px 2px 1px $Dark-Gray-Opacity;
+    color: $Dark-Blue;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    &::placeholder {
+        color: $Very-Dark-Blue-2;
+        font-family: 'Nunito Sans', sans-serif;
+    }
+}
+
+.homeContainer-dark select {
+    box-shadow: 2px 2px 1px $Very-Dark-Blue-Opacity;
+    appearance: none;
+    border: 0;
+    outline: 0;
+    background: none;
+    color: inherit;
+    box-shadow: none;
+    color: $Very-Light-Gray;
+}
+
+.homeContainer-light select {
+    box-shadow: 2px 2px 1px $Very-Dark-Blue-Opacity;
+    appearance: none;
+    border: 0;
+    outline: 0;
+    background: none;
+    color: inherit;
+    box-shadow: none;
+    color: $Dark-Blue;
+}
+  
+.homeContainer-dark select::-ms-expand {
+    display: none;
+}
+
+.homeContainer-light select::-ms-expand {
+    display: none;
+}
+
+.homeContainer-dark .select {
+    position: relative;
+    background: $Dark-Blue;
+    border-radius: 0.25rem;
+    overflow: hidden;
+    box-shadow: 2px 2px 1px $Very-Dark-Blue-Opacity; 
+}
+
+.homeContainer-light .select {
+    position: relative;
+    background: $White;
+    border-radius: 0.25rem;
+    overflow: hidden;
+    box-shadow: 2px 2px 1px $Very-Dark-Blue-Opacity; 
+}
+
+.homeContainer-dark .select select {
+    padding: 13px 70px 13px 20px;
+    width: 100%;
+    max-width: 200px;
+    cursor: pointer;
+}
+
+.homeContainer-light .select select {
+    padding: 13px 70px 13px 20px;
+    width: 100%;
+    max-width: 200px;
+    cursor: pointer;
+}
+
+.homeContainer-dark .select::after {
+    content: "\25BC";
+    color: $Very-Light-Gray;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    transition: 0.25s all ease;
+    pointer-events: none; 
+}
+
+.homeContainer-light .select::after {
+    content: "\25BC";
+    color: $Dark-Blue;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    transition: 0.25s all ease;
+    pointer-events: none; 
+}
+
+.homeContainer-dark .select:hover::after {
+    color: $Very-Light-Gray;
+    animation: bounce 0.5s infinite;
+}
+
+.homeContainer-light .select:hover::after {
+    color: $Dark-Blue;
+    animation: bounce 0.5s infinite;
+}
+
+@keyframes bounce {
+    25% {
+      transform: translatey(5px);
+    }
+    75% {
+      transform: translatey(-5px);
+    }
+}
+
+.homeContainer-dark option {
+    background: $Dark-Blue;
+    outline: none;
+    border: none;
+    &:hover {
+        background: $Dark-Blue;
+    } 
+}
+
+.homeContainer-dark a {
+    text-decoration: none;
+}
+
+.homeContainer-light a {
+    text-decoration: none;
+}
+
+.homeContainer-dark a img {
+    width: 100%;
+}
+
+.homeContainer-light a img {
+    width: 100%;
+}
+
+.homeContainer-dark a .countryDetails {
+    background-color: $Dark-Blue;
+    box-shadow: 2px 2px 1px $Very-Dark-Blue-Opacity;
+}
+
+.homeContainer-light a .countryDetails {
+    background-color: $White;
+    box-shadow: 2px 2px 1px $Dark-Gray-Opacity;
+}
+
+.homeContainer-dark a h5, .homeContainer-dark a p {
+    color: $White;
+    font-weight: 900;
+}
+
+.homeContainer-dark a h5 {
+    font-size: 16px;
+}
+
+.homeContainer-light a h5 {
+    font-size: 16px;
+}
+
+.homeContainer-dark a p {
+    font-weight: 500;
+}
+
+.homeContainer-light a h5, .homeContainer-light a p {
+    color: $Dark-Blue;
+    font-weight: 900;
+}
+
+.homeContainer-light a p {
+    font-weight: 500;
+}
+
+.homeContainer-dark a span {
+    color: $Dark-Gray;
+    font-weight: 500;
+}
+
+.homeContainer-light a span {
+    color: $Dark-Gray;
+    font-weight: 500;
+}
+
+.homeContainer-dark .error {
+    color: $White;
+}
+
+.homeContainer-light .error {
+    color: $Dark-Blue;
+}

@@ -1,0 +1,69 @@
+@import "../variables/variable.scss";
+
+.singleCountry-dark button {
+    background-color: $Dark-Blue;
+    border: none;
+    outline: none;
+    padding: 10px 25px;
+    cursor: pointer;
+    font-weight: 600;
+    color: $White;
+    border-radius: 5px;
+    box-shadow: 2px 2px 1px $Very-Dark-Blue-Opacity;
+}
+
+.singleCountry-light button {
+    background-color: $White;
+    border: none;
+    outline: none;
+    padding: 10px 25px;
+    cursor: pointer;
+    font-weight: 600;
+    color: $Dark-Blue;
+    border-radius: 5px;
+    box-shadow: 2px 2px 1px $Very-Dark-Blue-Opacity;
+}
+
+.singleCountry-dark img {
+    width: 100%;
+}
+
+.singleCountry-light img {
+    width: 100%;
+}
+
+.singleCountry-dark h3 {
+    color: $White;
+}
+
+.singleCountry-light h3 {
+    color: $Dark-Blue;
+}
+
+.singleCountry-dark p {
+    color: $White;
+    font-weight: 600;
+}
+
+.singleCountry-light p {
+    color: $Dark-Blue;
+    font-weight: 600;
+}
+
+.singleCountry-dark span {
+    color: $Dark-Gray;
+    font-weight: 500;
+}
+
+.singleCountry-light span {
+    color: $Dark-Gray;
+    font-weight: 500;
+}
+
+.singleCountry-dark .error {
+    color: $White;
+}
+
+.singleCountry-light .error {
+    color: $Dark-Blue;
+}
