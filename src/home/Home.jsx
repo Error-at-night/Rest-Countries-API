@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { useContext, useEffect } from 'react';
 
 import { Container, Col, Row } from 'react-bootstrap';
 
@@ -13,7 +13,7 @@ const Home = () => {
  
   const { theme } = useContext(ThemeContext)
 
-  const { search, setSearch, countries, region, setRegion, error } = useFetch("https://restcountries.com/v3.1/all")
+  const { search, setSearch, countries, region, setRegion, error, message, setMessage } = useFetch("https://restcountries.com/v3.1/all")
 
   const homeContainer = "homeContainer-" + theme
 
@@ -25,6 +25,14 @@ const Home = () => {
       return country.name.common.toLowerCase().includes(search.toLowerCase())
     }
   })
+
+  useEffect(() => {
+    if(search !== "" && searchedCountries.length === 0) {
+      setMessage("No country found")
+    } else {
+      setMessage("")
+    }
+  }, [searchedCountries, search, setMessage])
 
   return (
     <Container className={`pt-5 ${homeContainer}`}>
@@ -73,7 +81,16 @@ const Home = () => {
       </Row>
       {error && 
         <Row>
-          <h2 className='error'>{error}</h2>
+          <Col xs={12}>
+            <h2 className='error'>{error}</h2>
+          </Col>
+        </Row>
+      }
+      {message && 
+        <Row>
+          <Col xs={12}>
+            <h2 className='error'>{message}</h2>
+          </Col>
         </Row>
       }
     </Container>

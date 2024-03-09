@@ -5,6 +5,7 @@ const useFetch = (url) => {
   const [countries, setCountries] = useState([]);
   const [region, setRegion] = useState("")
   const [error, setError] = useState(null);
+  const [message, setMessage] = useState("")
 
   useEffect(() => {
     fetch(url)
@@ -24,7 +25,7 @@ const useFetch = (url) => {
         })
   }, [url])
   
-  return { search, setSearch, countries, region, setRegion, error }
+  return { search, setSearch, countries, region, setRegion, error, message, setMessage }
 }
 
 export default useFetch
