@@ -7,7 +7,10 @@ import { ThemeContext } from '../layout/Layout';
 import { Link } from 'react-router-dom';
 
 import "./Home.scss"
+
 import useFetch from '../customHook/customHook';
+
+import ScrollToTopButton from '../scrollToTopButton/ScrollToTopButton';
 
 const Home = () => {
  
@@ -36,6 +39,7 @@ const Home = () => {
 
   return (
     <Container className={`pt-5 ${homeContainer}`}>
+      <ScrollToTopButton/>
       <Row className="row justify-content-between">
         <Col sm={6} md={6} lg={6}>
           <div>
