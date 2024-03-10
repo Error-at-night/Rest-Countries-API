@@ -10,6 +10,8 @@ import { useContext } from 'react';
 
 import { ThemeContext } from '../layout/Layout';
 
+import Loader from "../loader/Loader";
+
 import "./singleCountry.scss"
 
 const SingleCountry = () => {
@@ -17,7 +19,7 @@ const SingleCountry = () => {
 
   const navigate = useNavigate()
 
-  const { countries, error } = useFetch("https://restcountries.com/v3.1/name/" + name)
+  const { countries, error, isLoading } = useFetch("https://restcountries.com/v3.1/name/" + name)
 
   const { theme } = useContext(ThemeContext)
 
@@ -35,7 +37,7 @@ const SingleCountry = () => {
           </button>
         </Col>
       </Row>
-        {countries.map((country, index) => (
+        {isLoading ? <Loader/> : countries.map((country, index) => (
            <Row className='mt-5 align-items-center justify-content-between' key={index} >
               <Col xs={12} sm={12} lg={6}>
                 <img src={country.flags.png} alt={country.flags.alt} className="img-fluid"/>
