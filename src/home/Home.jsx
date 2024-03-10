@@ -11,12 +11,13 @@ import "./Home.scss"
 import useFetch from '../customHook/customHook';
 
 import ScrollToTopButton from '../scrollToTopButton/ScrollToTopButton';
+import Loader from '../loader/Loader';
 
 const Home = () => {
  
   const { theme } = useContext(ThemeContext)
 
-  const { search, setSearch, countries, region, setRegion, error, message, setMessage } = useFetch("https://restcountries.com/v3.1/all")
+  const { search, setSearch, countries, region, setRegion, error, message, setMessage, isLoading } = useFetch("https://restcountries.com/v3.1/all")
 
   const homeContainer = "homeContainer-" + theme
 
@@ -67,7 +68,7 @@ const Home = () => {
         </Col>
       </Row>
       <Row className="row justify-content-start mt-5">
-        {searchedCountries.map((country, index) => (
+        {isLoading ? <Loader/> : searchedCountries.map((country, index) => (
           <Col sm={12} md={6} lg={4} xl={3} key={index} className="mb-5">
             <Link to={`/name/${country.name.common}`}>
               <img src={country.flags.png} alt={country.flags.alt} height={200} width="auto"/>
