@@ -47,7 +47,7 @@ const Home = () => {
               type="search" 
               placeholder='Search for a country...'
               value={search}
-              onChange={(e) => setSearch(e.target.value)}
+              onChange={(e) => setSearch(e.target.value.trim())}
             />
           </div>
         </Col>
