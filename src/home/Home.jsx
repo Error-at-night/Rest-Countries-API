@@ -75,7 +75,7 @@ const Home = () => {
               <div className="px-3 pt-3 pb-1 countryDetails">
                 <h5>{country.name.common}</h5>
                 <div className="mt-3">
-                  <p>Population: <span>{country.population}</span></p>
+                  <p>Population: <span>{country.population.toLocaleString()}</span></p>
                   <p>Region: <span>{country.region}</span></p>
                   <p>Capital: <span>{country.capital}</span></p>
                 </div>

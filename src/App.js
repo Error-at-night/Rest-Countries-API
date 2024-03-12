@@ -9,6 +9,8 @@ import Home from "./home/Home";
 import SingleCountry from './singleCountry/SingleCountry';
 import NotFound from './notFound/NotFound';
 
+import "./index.css"
+
 const router = createBrowserRouter([
   {
     path: "/",

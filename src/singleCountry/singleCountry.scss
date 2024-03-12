@@ -26,10 +26,12 @@
 
 .singleCountry-dark img {
     width: 100%;
+    box-shadow: 2px 2px 5px $Very-Dark-Blue-Opacity;
 }
 
 .singleCountry-light img {
     width: 100%;
+    box-shadow: 2px 2px 5px $Dark-Gray-Opacity;
 }
 
 .singleCountry-dark h3 {
@@ -58,6 +60,18 @@
 .singleCountry-light span {
     color: $Dark-Gray;
     font-weight: 500;
+}
+
+.singleCountry-dark span.borderr {
+    background-color: $Dark-Blue;
+    padding: 2px 3px;
+    box-shadow: 1px 1px 1px $Very-Dark-Blue-Opacity;
+}
+
+.singleCountry-light span.borderr {
+    background-color: $White;
+    padding: 2px 3px;
+    box-shadow: 1px 1px 1px $Very-Dark-Blue-Opacity;
 }
 
 .singleCountry-dark .error {
