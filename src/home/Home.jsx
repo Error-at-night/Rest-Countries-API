@@ -56,7 +56,8 @@ const Home = () => {
           <div className="d-flex justify-content-start justify-content-sm-end">
             <label className='select'>
               <select value={region} onChange={(e) => setRegion(e.target.value)}>
-                <option value="">Filter by Region</option>
+                <option value="" disabled>Filter by Region</option>
+                <option value="">All</option>
                 <option value="Africa">Africa</option>
                 <option value="Americas">America</option>
                 <option value="Asia">Asia</option>
